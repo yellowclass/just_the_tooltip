@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
 
@@ -19,11 +21,13 @@ class JustTheController extends ValueNotifier<TooltipStatus> {
     bool immediately = false,
     bool autoClose = false,
   }) {
-    throw StateError('This controller has not been attached to a tooltip yet.');
+    log("This controller has not been attached to a tooltip yet.");
+    return Future.value();
   }
 
   static Future<void> defaultHideTooltip({bool immediately = false}) {
-    throw StateError('This controller has not been attached to a tooltip yet.');
+    log("This controller has not been attached to a tooltip yet.");
+    return Future.value();
   }
 
   @mustCallSuper
