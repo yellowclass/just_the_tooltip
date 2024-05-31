@@ -19,11 +19,13 @@ class JustTheController extends ValueNotifier<TooltipStatus> {
     bool immediately = false,
     bool autoClose = false,
   }) {
-    throw StateError('This controller has not been attached to a tooltip yet.');
+    debugPrint("This controller has not been attached to a tooltip yet.");
+    return Future.value();
   }
 
   static Future<void> defaultHideTooltip({bool immediately = false}) {
-    throw StateError('This controller has not been attached to a tooltip yet.');
+    debugPrint("This controller has not been attached to a tooltip yet.");
+    return Future.value();
   }
 
   @mustCallSuper
